@@ -19,7 +19,7 @@ public class Polynomial
     {
         if(max(p.coefficients.length, this.coefficients.length) == p.coefficients.length)
         {
-            //add polynomials - p is the longer list
+            //add polynomials when p is the longer list
             for(int i = 0; i < this.coefficients.length; i++)
             {
                 p.coefficients[i] = this.coefficients[i] + p.coefficients[i];
@@ -29,7 +29,7 @@ public class Polynomial
         }
         else
         {
-            //add polynomials - this is the longer list
+            //add polynomials when this is the longer list
             for(int i = 0; i < p.coefficients.length; i++)
             {
                 this.coefficients[i] = this.coefficients[i] + p.coefficients[i];
