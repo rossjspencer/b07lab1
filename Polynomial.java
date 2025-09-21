@@ -53,6 +53,6 @@ public class Polynomial
 
     public boolean hasRoot(double x)
     {
-        return this.evaluate(x) == 0.0;
+        return Math.abs(this.evaluate(x)) <= 0.0000000000000001;
     }
 }
