@@ -119,6 +119,7 @@ public class Polynomial
         //bonus step: output polynomials will be sorted and pretty
         List<Map.Entry<Integer, Double>> prettyPolynomial = new ArrayList<>(polynomialMap.entrySet());
         prettyPolynomial.sort(Comparator.comparingInt(Map.Entry::getKey));
+        Collections.reverse(prettyPolynomial);
 
         //return to arrays
         int size = prettyPolynomial.size();
