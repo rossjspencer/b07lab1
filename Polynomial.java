@@ -59,12 +59,24 @@ public class Polynomial
     {
         String polynomialString = "";
 
+        //evil dirty disgusting if chain
         for(int i = 0; i < this.coefficients.length; i++)
         {
             //polynomial string does not display x0
-            if(this.exponents[i] == 0)
+            if(this.exponents[i] == 0 && polynomialString.isEmpty())
             {
                 polynomialString += this.coefficients[i];
+            }
+            else if(this.exponents[i] == 0)
+            {
+                if(this.coefficients[i] > 0)
+                {
+                    polynomialString += "+" + this.coefficients[i];
+                }
+                else
+                {
+                    polynomialString += "-" + this.coefficients[i];
+                }
             }
             else
             {

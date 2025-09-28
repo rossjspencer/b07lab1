@@ -22,8 +22,16 @@ public class Driver
         Polynomial p4 = p3.multiply(p2);
         Polynomial p5 = p3.add(p2);
 
+        double[] c6 = {-9,-2, 4, 6, 2, 9};
+        int[] e6 = {4, 1, 0, 2, 12, 5};
+        Polynomial p6 = new Polynomial(c6, e6);
+
         p4.saveToFile("multiplication.txt");
         p5.saveToFile("addition_out_of_order.txt");
+        p6.saveToFile("long_polynomial.txt");
+
+        Polynomial p7 = new Polynomial(new File("long_polynomial.txt"));
+        p7.saveToFile("copy_test.txt");
 
         Polynomial s = p1.add(p2);
         System.out.println("s(0.1) = " + s.evaluate(0.1));
