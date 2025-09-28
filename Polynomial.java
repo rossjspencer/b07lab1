@@ -63,10 +63,12 @@ public class Polynomial
         for(int i = 0; i < this.coefficients.length; i++)
         {
             //polynomial string does not display x0
+            //0 exponent and empty string
             if(this.exponents[i] == 0 && polynomialString.isEmpty())
             {
                 polynomialString += this.coefficients[i];
             }
+            //0 exponent and nonempty string
             else if(this.exponents[i] == 0)
             {
                 if(this.coefficients[i] > 0)
@@ -75,7 +77,7 @@ public class Polynomial
                 }
                 else
                 {
-                    polynomialString += "-" + this.coefficients[i];
+                    polynomialString += this.coefficients[i];
                 }
             }
             else
